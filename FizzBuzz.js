@@ -8,8 +8,6 @@ const startsWithB = (word) => {
     word.startsWith('B');     
 };
 
-
-
 for (let i = 1; i <= 300; i++) {
     let result = [];
 
@@ -31,6 +29,9 @@ for (let i = 1; i <= 300; i++) {
         } else {
             result.splice(result.findIndex(startsWithB), 0, 'Fezz');
                 }
+    }
+    if (isDivisibleBy(i, 17)){
+        result.reverse();
     }
     if (result.length === 0) {
         result.push(i);
