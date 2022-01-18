@@ -3,22 +3,22 @@ const isDivisibleBy = (num, div) => {
 }
 
 for (let i = 1; i <= 100; i++) {
-    let result = '';
+    let result = [];
 
     if (isDivisibleBy(i, 3)) {
-        result += 'Fizz';
+        result.push('Fizz');
     }
     if (isDivisibleBy(i, 5)) {
-        result += 'Buzz';
+        result.push('Buzz');
     }
     if(isDivisibleBy(i, 7)) {
-        result += 'Bang';
+        result.push('Bang');
     }
     if(isDivisibleBy(i, 11)) {
-        result = 'Bong';
+        result.splice(0, result.length, 'Bong');
     }
-    if (result === '') {
-        result = i;
+    if (result.length === 0) {
+        result.push(i);
     }
-    console.log(result);
+    console.log(result.join(''));
 };
