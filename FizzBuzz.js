@@ -1,8 +1,16 @@
+
+
 const isDivisibleBy = (num, div) => {
     return (num % div === 0);
 }
 
-for (let i = 1; i <= 100; i++) {
+const startsWithB = (word) => {
+    word.startsWith('B');     
+};
+
+
+
+for (let i = 1; i <= 300; i++) {
     let result = [];
 
     if (isDivisibleBy(i, 3)) {
@@ -15,7 +23,14 @@ for (let i = 1; i <= 100; i++) {
         result.push('Bang');
     }
     if(isDivisibleBy(i, 11)) {
-        result.splice(0, result.length, 'Bong');
+        result = ['Bong']; //clear existing array and replace with 'Bong'
+    }
+    if (isDivisibleBy(i, 13)) {
+        if (result.length === 0) {
+            result.push('Fezz');
+        } else {
+            result.splice(result.findIndex(startsWithB), 0, 'Fezz');
+                }
     }
     if (result.length === 0) {
         result.push(i);
