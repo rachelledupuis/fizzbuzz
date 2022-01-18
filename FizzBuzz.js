@@ -14,6 +14,9 @@ for (let i = 1; i <= 100; i++) {
     if(isDivisibleBy(i, 7)) {
         result += 'Bang';
     }
+    if(isDivisibleBy(i, 11)) {
+        result = 'Bong';
+    }
     if (result === '') {
         result = i;
     }
