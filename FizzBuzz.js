@@ -1,4 +1,7 @@
+const readline = require('readline-sync');
 
+console.log('Welcome to FizzBuzz!\nWhat number do you want to count to?')
+const maxNum = readline.prompt()
 
 const isDivisibleBy = (num, div) => {
     return (num % div === 0);
@@ -8,7 +11,7 @@ const startsWithB = (word) => {
     word.startsWith('B');     
 };
 
-for (let i = 1; i <= 300; i++) {
+for (let i = 1; i <= maxNum; i++) {
     let result = [];
 
     if (isDivisibleBy(i, 3)) {
